@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- 配置全局参数编码方式-->
+    <context-param>
+        <param-name>encoding</param-name>
+        <param-value>utf-8</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>findProductByName</servlet-name>
+        <servlet-class>com.etc.project.servlet.ProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!--        -->
+        <servlet-name>findProductByName</servlet-name>
+        <!--        url映射地址-->
+        <url-pattern>/ajax</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>jquery_ajax</servlet-name>
+        <servlet-class>com.etc.project.servlet.JqueryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!--        -->
+        <servlet-name>jquery_ajax</servlet-name>
+        <!--        url映射地址-->
+        <url-pattern>/jquery</url-pattern>
+    </servlet-mapping>
+
+
+
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
